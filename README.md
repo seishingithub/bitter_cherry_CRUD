@@ -17,3 +17,9 @@ Welcome to the most amazing repo of all time.
 * Zach
 * Lori
 * Gerard
+
+# Local database and migrations
+
+To create your local databases and run table migrations:
+
+    $ rake db:create db:migrate
