@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<header>
+  <section>
+    <h1>Media Manager</h1>
+  </section>
+</header>
+<main>
+  <section id="main">
+    <%= yield %>
+  </section>
+</main>
 
 </body>
 </html>

@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+header{
+    background-color:steelblue;
+    padding:1em;
+}
+header section{
+
+    max-width:980px;
+    margin:0 auto;
+}
+header h1{
+  color:#ffffff;
+}
