@@ -6,6 +6,7 @@ feature "Manage Media" do
     expect(page).to have_content 'Media Manager'
     expect(page).to have_content 'all pictures'
     expect(page).to have_content 'all videos'
+    expect(page).to have_content 'vimeo videos'
     expect(page).to have_content 'Not copyrighted at all'
   end
 end
