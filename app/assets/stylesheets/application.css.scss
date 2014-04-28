@@ -11,63 +11,67 @@
  * file per style scope.
  *
  */
-
 @import 'normalize';
+@import '_form';
 
-body{
-  background-color:aliceblue;
+body {
+  background-color: aliceblue;
 }
 
-header{
-    background-color:steelblue;
-    padding:1em;
-  margin:0;
+header {
+  background-color: steelblue;
+  padding: 1em;
+  margin: 0;
 }
 
-header section{
-    max-width:980px;
-    margin:0 auto;
-  overflow:hidden;
+header section {
+  max-width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
 }
-header nav{
-  float:right;
-  margin-top:2em;
-  color:#ffffff;
 
-  a{
-    color:#ffffff;
+header nav {
+  float: right;
+  margin-top: 2em;
+  color: #ffffff;
+
+  a {
+    color: #ffffff;
   }
 }
-header h1{
-  color:#ffffff;
-  float:left;
+
+header h1 {
+  color: #ffffff;
+  float: left;
 }
 
-main{
-  display:block;
-  padding:0;
-  margin:0;
-}
-main section#main{
-  max-width:980px;
-  margin:0 auto;
-  padding:1em;
-  min-height:400px;
-  background-color:#ffffff;
-}
-main section#main h2{
-  padding:0;
-  margin:0;
+main {
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 
-footer{
-background-color:#333333;
+main section#main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1em;
+  min-height: 400px;
+  background-color: #ffffff;
 }
 
-footer section{
-  padding:2em 1em;
-  max-width:980px;
-  margin:0 auto;
-  color:#ffffff;
+main section#main h2 {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  background-color: #333333;
+}
+
+footer section {
+  padding: 2em 1em;
+  max-width: 980px;
+  margin: 0 auto;
+  color: #ffffff;
 }
 

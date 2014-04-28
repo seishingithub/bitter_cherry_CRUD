@@ -1,0 +1,17 @@
+form {
+  font-size: 1.2em;
+}
+
+form label {
+  float: left;
+  width: 7em;
+}
+
+form input, form textarea {
+  width: 25em;
+  padding: .2em;
+}
+
+form input[type='text'] {
+  width: 25em;
+}
