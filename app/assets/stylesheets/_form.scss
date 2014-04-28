@@ -4,7 +4,11 @@ form {
 
 form label {
   float: left;
-  width: 7em;
+  width: 10em;
+}
+
+form textarea {
+  height: 8em;
 }
 
 form input, form textarea {
