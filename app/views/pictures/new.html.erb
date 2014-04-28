@@ -2,15 +2,15 @@
 
 <%= form_for @picture do |f| %>
   <p>
-    <%= f.label :url %>
+    <%= f.label :url, 'URL of Video'%>
     <%= f.text_field :url %>
   </p>
   <p>
-    <%= f.label :description %>
+    <%= f.label :description, 'Short Description' %>
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :rating %>
+    <%= f.label :rating, 'Rating' %>
     <%= f.text_field :rating %>
   </p>
 <% end %>
