@@ -1,0 +1,18 @@
+<h1>Vimeo Videos</h1>
+
+<%= notice %>
+<br>
+<br>
+
+<a href="/vimeo_videos/new">New Video</a>
+
+
+
+<% @vimeo_videos.each do |video| %>
+  <ul>
+    <li>
+      <%= link_to video.url, video %>
+    </li>
+  </ul>
+<% end %>
+

@@ -1,0 +1,21 @@
+<h1>Add a video</h1>
+<ul>
+  <% @vimeo_video.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+
+
+<%= form_for @vimeo_video do |f| %>
+
+  <%= f.label :url %>:
+  <%= f.text_field :url %><br />
+
+  <%= f.label :description %>:
+  <%= f.text_field :description %><br />
+
+  <%= f.label :rating %>:
+  <%= f.text_field :rating %><br />
+
+  <%= f.submit %>
+<% end %>

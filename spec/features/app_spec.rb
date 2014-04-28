@@ -5,4 +5,6 @@ feature "Manage Media" do
     visit '/'
     expect(page).to have_content 'Media Manager'
   end
+
+
 end
