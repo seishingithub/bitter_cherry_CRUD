@@ -32,4 +32,21 @@ feature 'User can manage videos' do
     expect(page).to have_content(desc)
     expect(page).to have_content(rating)
   end
+
+  scenario 'user can view the show page and watch the video' do
+    url = 'http://www.youtube.com/watch?v=4lCotjd3pR8'
+    desc = 'Soccer Ball (In The Face) - Parry Gripp'
+    rating = '5'
+    visit '/'
+    click_on 'all videos'
+    click_on 'New Video'
+    fill_in 'URL', with: url
+    fill_in 'Description', with: desc
+    fill_in 'Rating', with: rating
+    click_on 'Create Video'
+    click_on 'all videos'
+    click_on url
+    expect(page).to have_content(desc)
+  end
+
 end
