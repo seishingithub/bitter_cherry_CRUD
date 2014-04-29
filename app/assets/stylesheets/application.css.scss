@@ -23,18 +23,18 @@
 @import 'normalize';
 @import '_form';
 
-html{
-  height:100%;
+html {
+  height: 100%;
 }
 
 body {
   background-color: aliceblue;
-  height:100%;
+  height: 100%;
 }
 
-#body_container{
-  min-height:100%;
-  position:relative;
+#body_container {
+  min-height: 100%;
+  position: relative;
 }
 
 header {
@@ -47,7 +47,7 @@ header section {
   max-width: 980px;
   margin: 0 auto;
   overflow: hidden;
-  padding:0 1em;
+  padding: 0 1em;
 }
 
 header nav {
@@ -69,7 +69,7 @@ main {
   display: block;
   padding: 0;
   margin: 0;
-  height:auto;
+  height: auto;
 
 }
 
@@ -78,9 +78,9 @@ main section#main {
   margin: 0 auto;
   padding: 1em;
   background-color: #ffffff;
-  height:auto;
-  padding-bottom:6em;
-  overflow:hidden;
+  height: auto;
+  padding-bottom: 6em;
+  overflow: hidden;
 }
 
 main section#main h2 {
@@ -90,25 +90,34 @@ main section#main h2 {
 
 footer {
   background-color: #333333;
-  height:5em;
-  position:absolute;
-  bottom:0;
-  width:100%;
+  height: 5em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer section {
-  padding-top:1em;
-  padding-left:1em;
+  padding-top: 1em;
+  padding-left: 1em;
   max-width: 980px;
   margin: 0 auto;
   color: #ffffff;
 }
 
-.media_container{
-  float:left;
-  margin-right:5em;
+.media_container {
+  float: left;
+  margin-right: 5em;
 }
-.media_description{
-padding:1em;
+
+.media_description {
+  padding: 1em;
+}
+
+.picture_container a {
+  float: left;
+  margin: .5em;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
 }
 

@@ -1,3 +1,9 @@
 <h2>Pictures</h2>
 
 <p><a href="/pictures/new">New Picture</a></p>
+
+<div class="picture_container">
+  <% @pictures.each do |picture| %>
+    <a href="<%= picture_path(picture.id) %>"><img src="<%= picture.url %>" width="220"/></a>
+  <% end %>
+</div>
