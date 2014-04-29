@@ -36,6 +36,12 @@ class VimeoVideosController < ApplicationController
     redirect_to vimeo_video_path(@vimeo_video), notice: "Video Updated"
   end
 
+  def destroy
+    @vimeo_video = VimeoVideo.find(params[:id])
+    @vimeo_video.delete
+    redirect_to vimeo_videos_path
+  end
+
 
 
 end
