@@ -1,5 +1,9 @@
 class VideosController < ApplicationController
 
+  def index
+    @videos = Video.all
+  end
+
   def new
     @video = Video.new
   end
@@ -18,6 +22,8 @@ class VideosController < ApplicationController
 
   def show
     @video = Video.find(params[:id])
+    @youtube_id = @video[:url].split('v=')[1]
+    @youtube_url = '//www.youtube.com/embed/' + @youtube_id
   end
 
 end
