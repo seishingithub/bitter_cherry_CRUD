@@ -5,5 +5,7 @@
     <li><%= @vimeo_video.rating %></li>
 
   </ul>
+<a href="/vimeo_videos/<%=@vimeo_video.id %>/edit">Edit</a>
 
+<%= link_to "Delete", vimeo_video_path(@vimeo_video), method: :delete, data: {confirm: "Are you sure?"} %>
 

@@ -20,9 +20,28 @@ class VimeoVideosController < ApplicationController
       render :new
     end
   end
+
   def show
     @vimeo_video = VimeoVideo.find(params[:id])
   end
+
+  def edit
+    @vimeo_video = VimeoVideo.find(params[:id])
+
+  end
+  def update
+    @vimeo_video = VimeoVideo.find(params[:id])
+    @vimeo_video.update(:url =>params[:vimeo_video][:url], :description => params[:vimeo_video][:description], :rating => params[:vimeo_video][:rating])
+
+    redirect_to vimeo_video_path(@vimeo_video), notice: "Video Updated"
+  end
+
+  def destroy
+    @vimeo_video = VimeoVideo.find(params[:id])
+    @vimeo_video.delete
+    redirect_to vimeo_videos_path
+  end
+
 
 
 end

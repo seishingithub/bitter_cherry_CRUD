@@ -1,0 +1,16 @@
+
+<%= form_for @vimeo_video do |f| %>
+  <p>
+    <%= f.label :url %>
+    <%= f.text_field :url %><br/>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_area :description %><br/>
+  </p>
+  <p>
+    <%= f.label :rating %>
+    <%= f.text_field :rating %><br/>
+  </p>
+  <%= f.submit 'Update' %>
+<% end %>

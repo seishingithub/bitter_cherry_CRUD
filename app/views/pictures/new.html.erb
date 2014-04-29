@@ -1,5 +1,11 @@
 <h2>Add a Picture</h2>
 
+<ul class="errors">
+  <% @picture.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+
 <%= form_for @picture do |f| %>
   <p>
     <%= f.label :url, 'URL of Picture'%>
