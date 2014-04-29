@@ -13,7 +13,7 @@ feature "Managing Vimeo Videoes" do
     fill_in 'vimeo_video[url]', :with => 'www.youtube.com'
     fill_in 'vimeo_video[description]', :with => 'This is a description of a video'
     fill_in 'vimeo_video[rating]', :with => '1'
-    click_on 'Create Vimeo video'
+    click_on 'Create Video'
     expect(page).to have_content 'www.youtube.com'
     expect(page).to have_content 'Video Successfully Created'
   end
@@ -24,7 +24,7 @@ feature "Managing Vimeo Videoes" do
     fill_in 'vimeo_video[url]', :with => 'www.example.com'
     fill_in 'vimeo_video[description]', :with => 'This is a description of a video'
     fill_in 'vimeo_video[rating]', :with => '1'
-    click_on 'Create Vimeo video'
+    click_on 'Create Video'
     expect(page).to have_content 'www.example.com'
     visit '/vimeo_videos'
     click_on 'www.example.com'
@@ -38,7 +38,7 @@ feature "Managing Vimeo Videoes" do
     fill_in 'vimeo_video[url]', :with => ''
     fill_in 'vimeo_video[description]', :with => 'This is a description of a video'
     fill_in 'vimeo_video[rating]', :with => '1'
-    click_on 'Create Vimeo video'
+    click_on 'Create Video'
     expect(page).to have_content "Url can't be blank"
 
     visit '/vimeo_videos'
@@ -47,7 +47,7 @@ feature "Managing Vimeo Videoes" do
     fill_in 'vimeo_video[url]', :with => 'www.example.com'
     fill_in 'vimeo_video[description]', :with => ''
     fill_in 'vimeo_video[rating]', :with => '1'
-    click_on 'Create Vimeo video'
+    click_on 'Create Video'
     expect(page).to have_content "Description can't be blank"
   end
 

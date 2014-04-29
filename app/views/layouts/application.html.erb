@@ -2,28 +2,31 @@
 <html>
 <head>
   <title>BitterCherryCrud</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-  <section>
-    <h1>Media Manager</h1>
-    <nav>
-      <a href="/pictures">all pictures</a> | <a href="/videos">all videos</a> | <a href="/vimeo_videos">vimeo videos</a>
-    </nav>
-  </section>
-</header>
-<main>
-  <section id="main">
-    <%= yield %>
-  </section>
-</main>
-<footer>
-  <section>
-    <p>Not copyrighted at all</p>
-  </section>
-</footer>
+<div id="body_container">
+  <header>
+    <section>
+      <h1>Media Manager</h1>
+      <nav>
+        <a href="/pictures">all pictures</a> | <a href="/videos">all videos</a> |
+        <a href="/vimeo_videos">vimeo videos</a>
+      </nav>
+    </section>
+  </header>
+  <main>
+    <section id="main">
+      <%= yield %>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <p>Not copyrighted at all</p>
+    </section>
+  </footer>
+</div>
 </body>
 </html>
