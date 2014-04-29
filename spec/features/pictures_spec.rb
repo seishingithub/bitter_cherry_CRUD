@@ -6,8 +6,13 @@ feature "Manage Pictures" do
     click_on 'all pictures'
     click_on 'New Picture'
     expect(page).to have_content "Add a Picture"
-    fill_in 'URL of Video', with: 'http://listdose.com/wp-content/uploads/2013/07/coffee-ending.jpg'
-    fill_in 'Short Description', with: 'Life is short.'
-    fill_in 'Rating', with: 5
+    fill_in 'picture[url]', with: 'http://listdose.com/wp-content/uploads/2013/07/coffee-ending.jpg'
+    fill_in 'picture[description]', with: 'Life is short.
+
+ here we go'
+    fill_in 'picture[rating]', with: 5
+    click_button 'Create Picture'
+    expect(page).to have_content 'Picture successfully created'
+    expect(page).to have_content 'Life is short.'
   end
 end

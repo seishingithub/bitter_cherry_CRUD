@@ -1,0 +1,13 @@
+<p><%= notice %></p>
+
+<div class="media_container">
+  <img src="<%= @picture.url %>" width="300"/>
+
+  <p>Rating: <%= @picture.rating %> out of 5</p>
+</div>
+
+<div class="media_description">
+  <p><a href="<%= @picture.url %>"><%= @picture.url.truncate(75) %></a></p>
+
+  <p><%= simple_format(@picture.description) %></p>
+</div>
