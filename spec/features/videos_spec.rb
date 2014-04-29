@@ -49,4 +49,20 @@ feature 'User can manage videos' do
     expect(page).to have_content(desc)
   end
 
+  scenario 'User sees error for a video without a URL' do
+    url = ''
+    desc = 'Soccer Ball (In The Face) - Parry Gripp'
+    rating = '5'
+    visit '/'
+    click_on 'all videos'
+    click_on 'New Video'
+    fill_in 'URL', with: url
+    fill_in 'Description', with: desc
+    fill_in 'Rating', with: rating
+    click_on 'Create Video'
+    expect(page).to have_content(desc)
+    expect(page).to have_content("Url can't be blank")
+
+  end
+
 end
