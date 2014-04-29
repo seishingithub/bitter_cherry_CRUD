@@ -133,3 +133,15 @@ ul.errors {
   padding: .2em 0;
 }
 
+.success {
+  color: forestgreen;
+}
+
+.delete {
+  background-color: red;
+  border: 3px solid black;
+  color: white;
+  font-weight: bold;
+  margin-top: 5em;
+}
+

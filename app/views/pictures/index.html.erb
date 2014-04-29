@@ -2,6 +2,8 @@
 
 <p><a href="/pictures/new">New Picture</a></p>
 
+<p class="success"><%= notice %></p>
+
 <div class="picture_container">
   <% @pictures.each do |picture| %>
     <a href="<%= picture_path(picture.id) %>"><img src="<%= picture.url %>" width="220"/></a>

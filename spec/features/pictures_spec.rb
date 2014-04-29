@@ -47,4 +47,14 @@ feature "Manage Pictures" do
     click_button 'Update Picture'
     expect(page).to have_content "This is an edited description"
   end
+
+  scenario "User can delete a picture" do
+    src = "http://listdose.com/wp-content/uploads/2013/07/coffee-ending.jpg"
+    click_on 'all pictures'
+    expect(page).to have_selector(:xpath, "//a/img[@src='#{src}']/..")
+    find(:xpath, "//a/img[@src='#{src}']/..").click
+    click_button 'Delete Picture'
+    expect(page).to_not have_selector(:xpath, "//a/img[@src='#{src}']/..")
+    expect(page).to have_content "Picture successfully deleted"
+  end
 end
