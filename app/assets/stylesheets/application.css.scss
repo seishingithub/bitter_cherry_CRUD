@@ -121,3 +121,15 @@ footer section {
   overflow: hidden;
 }
 
+ul.errors {
+  padding-left: 0;
+  padding-bottom: 1em;
+}
+
+.errors li {
+  list-style: none;
+  color: darkred;
+  margin-left: 0;
+  padding: .2em 0;
+}
+

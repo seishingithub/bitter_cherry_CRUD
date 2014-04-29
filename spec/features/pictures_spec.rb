@@ -28,4 +28,14 @@ feature "Manage Pictures" do
     find(:xpath, "//a/img[@src='#{src}']/..").click
     expect(page).to have_content("Life is short")
   end
+  scenario "User sees error when adding a picture without a URL" do
+    click_on 'all pictures'
+    click_on 'New Picture'
+    fill_in 'picture[url]', with: ''
+    fill_in 'picture[description]', with: ''
+    fill_in 'picture[rating]', with: 5
+    click_button 'Create Picture'
+    expect(page).to have_content "Url can't be blank"
+    expect(page).to have_content "Description can't be blank"
+  end
 end

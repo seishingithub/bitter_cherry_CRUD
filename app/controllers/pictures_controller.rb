@@ -12,9 +12,12 @@ class PicturesController < ApplicationController
     @picture.url = params[:picture][:url]
     @picture.description = params[:picture][:description]
     @picture.rating = params[:picture][:rating]
-    @picture.save
 
-    redirect_to picture_path(@picture), notice: "Picture successfully created"
+    if @picture.save
+      redirect_to picture_path(@picture), notice: "Picture successfully created"
+    else
+      render :new
+    end
   end
 
   def show
