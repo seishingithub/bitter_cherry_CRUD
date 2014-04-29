@@ -1,20 +1,23 @@
 <h2>Add a Video</h2>
 
-<form action="/videos/new" method="post">
-  <p>
-    <label for="url">URL of Video</label>
-    <input type="text" id="url" name="url">
-  </p>
+<ul>
+  <% @video.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
 
+<%= form_for @video do |f| %>
   <p>
-    <label for="description">Short Description</label>
-    <textarea type="text" id="description" name="description"></textarea>
+    <%= f.label :url, 'URL of Video' %>
+    <%= f.text_field :url %><br/>
   </p>
-
   <p>
-    <label for="rating">Rating</label>
-    <input type="text" id="rating" name="rating">
+    <%= f.label :description, 'Short Description' %>
+    <%= f.text_area :description %><br/>
   </p>
-  <input type="submit" value="Create Video">
-
-</form>
+  <p>
+    <%= f.label :rating, 'Rating' %>
+    <%= f.text_field :rating %><br/>
+  </p>
+  <%= f.submit 'Create Video' %>
+<% end %>
