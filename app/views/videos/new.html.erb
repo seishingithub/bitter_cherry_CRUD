@@ -1,22 +1,20 @@
 <h2>Add a Video</h2>
 
 <form action="/videos/new" method="post">
-  <table>
-    <tr>
-      <td><label for="url">URL of Video</label></td>
-      <td><input type="text" id="url" name="url"></td>
-    </tr>
-    <tr>
-      <td><label for="description">Short Description</label></td>
-      <td><input type="text" id="description" name="description"></td>
-    </tr>
-    <tr>
-      <td><label for="rating">Rating</label></td>
-      <td><input type="text" id="rating" name="rating"></td>
-    </tr>
-    <tr>
-      <td><input type="submit" value="Create Video"></td>
-      <td></td>
-    </tr>
-  </table>
+  <p>
+    <label for="url">URL of Video</label>
+    <input type="text" id="url" name="url">
+  </p>
+
+  <p>
+    <label for="description">Short Description</label>
+    <textarea type="text" id="description" name="description"></textarea>
+  </p>
+
+  <p>
+    <label for="rating">Rating</label>
+    <input type="text" id="rating" name="rating">
+  </p>
+  <input type="submit" value="Create Video">
+
 </form>
