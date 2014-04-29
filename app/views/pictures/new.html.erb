@@ -2,7 +2,7 @@
 
 <%= form_for @picture do |f| %>
   <p>
-    <%= f.label :url, 'URL of Video'%>
+    <%= f.label :url, 'URL of Picture'%>
     <%= f.text_field :url %>
   </p>
   <p>
@@ -11,7 +11,7 @@
   </p>
   <p>
     <%= f.label :rating, 'Rating' %>
-    <%= f.text_field :rating %>
+    <%= f.text_field :rating, class:'rating' %>
   </p>
   <%= f.submit 'Create Picture' %>
 <% end %>
