@@ -38,4 +38,13 @@ feature "Manage Pictures" do
     expect(page).to have_content "Url can't be blank"
     expect(page).to have_content "Description can't be blank"
   end
+  scenario "User can edit a picture" do
+    click_on 'all pictures'
+    src = "http://listdose.com/wp-content/uploads/2013/07/coffee-ending.jpg"
+    find(:xpath, "//a/img[@src='#{src}']/..").click
+    click_link 'Edit'
+    fill_in 'picture[description]', with: 'This is an edited description'
+    click_button 'Update Picture'
+    expect(page).to have_content "This is an edited description"
+  end
 end

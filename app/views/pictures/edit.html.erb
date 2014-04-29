@@ -1,0 +1,23 @@
+<h2>Edit picture</h2>
+
+<ul class="errors">
+  <% @picture.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+
+<%= form_for @picture do |f| %>
+  <p>
+    <%= f.label :url, 'URL of Picture'%>
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :description, 'Short Description' %>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :rating, 'Rating' %>
+    <%= f.text_field :rating, class:'rating' %>
+  </p>
+  <%= f.submit 'Update Picture' %>
+<% end %>
