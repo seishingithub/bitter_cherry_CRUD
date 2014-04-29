@@ -39,7 +39,7 @@ class VimeoVideosController < ApplicationController
   def destroy
     @vimeo_video = VimeoVideo.find(params[:id])
     @vimeo_video.delete
-    redirect_to vimeo_videos_path
+    redirect_to vimeo_videos_path, notice: "Video Deleted"
   end
 
 
