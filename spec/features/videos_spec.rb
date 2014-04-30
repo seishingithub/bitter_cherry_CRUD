@@ -107,6 +107,7 @@ feature 'User can manage videos' do
   scenario 'User can see an edit form for a video' do
     url = 'http://www.youtube.com/watch?v=4lCotjd3pR8'
     desc = 'Soccer Ball (In The Face) - Parry Gripp'
+    desc_update = "That hurts"
     rating = '5'
     visit '/'
     click_on 'all videos'
@@ -116,9 +117,8 @@ feature 'User can manage videos' do
     fill_in 'Rating', with: rating
     click_on 'Create Video'
     click_on 'Edit'
-    expect(page).to have_field('URL of Video', with: url)
-    expect(page).to have_content(desc)
-    expect(page).to have_field('Rating', with: rating)
+    fill_in 'Description', with: desc_update
+    click_on 'Update Video'
+    expect(page).to have_content(desc_update)
   end
-
 end
