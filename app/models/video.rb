@@ -1,3 +1,3 @@
 class Video < ActiveRecord::Base
-  validates :url, :presence => true
+  validates :url, :description, :presence => true
 end
