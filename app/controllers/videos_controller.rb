@@ -26,4 +26,8 @@ class VideosController < ApplicationController
     @youtube_url = '//www.youtube.com/embed/' + @youtube_id
   end
 
+  def edit
+    @video = Video.find(params[:id])
+  end
+
 end
