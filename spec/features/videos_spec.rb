@@ -80,4 +80,29 @@ feature 'User can manage videos' do
     expect(page).to have_content("Description can't be blank")
   end
 
+  scenario 'User sees a list of all added videos' do
+  url_1 = 'http://www.youtube.com/watch?v=4lCotjd3pR8'
+  desc_1 = 'broke my heart!'
+  rating = '5'
+  url_2 = 'http://www.youtube.com/watch?v=QvxdDDHElZo'
+  desc_2 = 'oh hai'
+  visit '/'
+  click_on 'all videos'
+  click_on 'New Video'
+  fill_in 'URL', with: url_1
+  fill_in 'Description', with: desc_1
+  fill_in 'Rating', with: rating
+  click_on 'Create Video'
+  click_on 'all videos'
+  click_on 'New Video'
+  fill_in 'URL', with: url_2
+  fill_in 'Description', with: desc_2
+  fill_in 'Rating', with: rating
+  click_on 'Create Video'
+  click_on 'all videos'
+  expect(page).to have_content(url_1)
+  expect(page).to have_content(url_2)
+  end
+
+
 end
