@@ -13,6 +13,7 @@ class VideosController < ApplicationController
     @video.url = params[:video][:url]
     @video.description = params[:video][:description]
     @video.rating = params[:video][:rating]
+
     if  @video.save
       redirect_to video_path(@video), notice: "Video Successfully Created"
     else

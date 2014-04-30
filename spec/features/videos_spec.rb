@@ -161,4 +161,17 @@ feature 'User can manage videos' do
     expect(current_path).to eq(videos_path)
   end
 
+  scenario 'Invalid Youtube url results in error message' do
+    url = 'http://www.google.com'
+    desc = 'Soccer Ball (In The Face) - Parry Gripp'
+    rating = '5'
+    visit '/'
+    click_on 'all videos'
+    click_on 'New Video'
+    fill_in 'URL', with: url
+    fill_in 'Description', with: desc
+    fill_in 'Rating', with: rating
+    click_on 'Create Video'
+    expect(page).to have_content('Url must be a valid YouTube url')
+  end
 end
