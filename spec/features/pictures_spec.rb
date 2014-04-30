@@ -38,6 +38,16 @@ feature "Manage Pictures" do
     expect(page).to have_content "Url can't be blank"
     expect(page).to have_content "Description can't be blank"
   end
+  scenario "User sees error when adding a non-url" do
+    click_on 'all pictures'
+    click_on 'New Picture'
+    fill_in 'picture[url]', with: 'blah'
+    fill_in 'picture[description]', with: 'a description'
+    fill_in 'picture[rating]', with: 5
+    click_button 'Create Picture'
+    expect(page).to have_content "Url must be a valid URL"
+  end
+
   scenario "User can edit a picture" do
     click_on 'all pictures'
     src = "http://listdose.com/wp-content/uploads/2013/07/coffee-ending.jpg"
