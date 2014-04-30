@@ -26,4 +26,21 @@ class VideosController < ApplicationController
     @youtube_url = '//www.youtube.com/embed/' + @youtube_id
   end
 
+  def edit
+    @video = Video.find(params[:id])
+  end
+
+  def update
+    @video = Video.find(params[:id])
+    @video.url = params[:video][:url]
+    @video.description = params[:video][:description]
+    @video.rating = params[:video][:rating]
+
+    if @video.save
+      redirect_to video_path(@video)
+    else
+      render :edit
+    end
+  end
+
 end
