@@ -1,3 +1,4 @@
+<h2>Edit a Video</h2>
 
 <%= form_for @vimeo_video do |f| %>
   <p>
@@ -12,5 +13,7 @@
     <%= f.label :rating %>
     <%= f.text_field :rating %><br/>
   </p>
+  <p>
   <%= f.submit 'Update' %>
+  </p>
 <% end %>
