@@ -40,4 +40,9 @@ class PicturesController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    Picture.find(params[:id]).destroy
+    redirect_to pictures_path, notice: "Picture successfully deleted"
+  end
 end

@@ -7,7 +7,11 @@
 </div>
 
 <div class="media_description">
-  <p><a href="<%= @picture.url %>"><%= @picture.url.truncate(55) %></a>&nbsp;&nbsp;&nbsp;<a href="/pictures/<%= @picture.id %>/edit">(Edit)</a></p>
+  <p>
+    <a href="<%= @picture.url %>"><%= @picture.url.truncate(55) %></a>&nbsp;&nbsp;&nbsp;<a href="/pictures/<%= @picture.id %>/edit">(Edit)</a>
+  </p>
 
   <p><%= simple_format(@picture.description) %></p>
+
+  <%= button_to "Delete Picture", picture_path(@picture), method: :delete, class: "delete" %>
 </div>
