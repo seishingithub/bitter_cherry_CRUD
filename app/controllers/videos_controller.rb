@@ -35,8 +35,12 @@ class VideosController < ApplicationController
     @video.url = params[:video][:url]
     @video.description = params[:video][:description]
     @video.rating = params[:video][:rating]
-    @video.save
-    redirect_to video_path(@video)
+
+    if @video.save
+      redirect_to video_path(@video)
+    else
+      render :edit
+    end
   end
 
 end

@@ -1,5 +1,11 @@
 <h2>Edit video</h2>
 
+<ul class="errors">
+  <% @video.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+
 <%= form_for @video do |f| %>
   <p>
     <%= f.label :url, 'URL of Video'%>

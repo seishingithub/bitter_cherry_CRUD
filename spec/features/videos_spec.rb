@@ -121,4 +121,26 @@ feature 'User can manage videos' do
     click_on 'Update Video'
     expect(page).to have_content(desc_update)
   end
+
+  scenario 'User sees error messages for blank fields during edit' do
+    url = 'http://www.youtube.com/watch?v=4lCotjd3pR8'
+    desc = 'Soccer Ball (In The Face) - Parry Gripp'
+    url_update = ''
+    desc_update = ''
+    rating = '5'
+    visit '/'
+    click_on 'all videos'
+    click_on 'New Video'
+    fill_in 'URL', with: url
+    fill_in 'Description', with: desc
+    fill_in 'Rating', with: rating
+    click_on 'Create Video'
+    click_on 'Edit'
+    fill_in 'URL', with: url_update
+    fill_in 'Description', with: desc_update
+    click_on 'Update Video'
+    expect(page).to have_content("Url can't be blank")
+    expect(page).to have_content("Description can't be blank")
+  end
+
 end
