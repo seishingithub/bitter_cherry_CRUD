@@ -1,10 +1,17 @@
-<%= notice %>
+<p class="success"><%= notice %></p>
 
+<div class="media_container">
+  <iframe width="420" height="315" src="<%= @youtube_url %>" frameborder="0" allowfullscreen></iframe>
 
-<iframe width="420" height="315" src="<%= @youtube_url %>" frameborder="0" allowfullscreen></iframe>
+  <p>Rating: <%= @video.rating %> out of 5</p>
+</div>
 
-<ul>
-  <li><%= @video.url %></li>
-  <li><%= @video.description %></li>
-  <li><%= @video.rating %></li>
-</ul>
+<div class="media_description">
+  <p>
+    <a href="<%= @video.url %>"><%= @video.url %></a>
+  </p>
+
+  <p>
+    <%= simple_format(@video.description) %>
+  </p>
+</div>
