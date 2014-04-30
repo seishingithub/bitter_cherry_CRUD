@@ -143,4 +143,22 @@ feature 'User can manage videos' do
     expect(page).to have_content("Description can't be blank")
   end
 
+  scenario 'User can delete a video' do
+    url = 'http://www.youtube.com/watch?v=4lCotjd3pR8'
+    desc = 'Soccer Ball (In The Face) - Parry Gripp'
+    rating = '5'
+    visit '/'
+    click_on 'all videos'
+    click_on 'New Video'
+    fill_in 'URL', with: url
+    fill_in 'Description', with: desc
+    fill_in 'Rating', with: rating
+    click_on 'Create Video'
+    expect(page).to have_content(url)
+    click_on 'Delete Video'
+    expect(page).to_not have_content(url)
+    expect(page).to have_content('Video successfully Deleted')
+    expect(current_path).to eq(videos_path)
+  end
+
 end

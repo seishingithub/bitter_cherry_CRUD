@@ -14,4 +14,6 @@
   <p>
     <%= simple_format(@video.description) %>
   </p>
+
+  <%= button_to "Delete Video", video_path(@video), method: :delete, class: "delete" %>
 </div>
