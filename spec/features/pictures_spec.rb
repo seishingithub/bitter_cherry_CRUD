@@ -67,4 +67,19 @@ feature "Manage Pictures" do
     expect(page).to_not have_selector(:xpath, "//a/img[@src='#{src}']/..")
     expect(page).to have_content "Picture successfully deleted"
   end
+
+  scenario 'Invalid rating results in error message' do
+    url = 'http://upload.wikimedia.org/wikipedia/commons/e/e2/Silky_bantam.jpg'
+    desc = 'This chicken is bomb'
+    rating = '6'
+    visit '/'
+    click_on 'all pictures'
+    click_on 'New Picture'
+    fill_in 'URL', with: url
+    fill_in 'Description', with: desc
+    fill_in 'Rating', with: rating
+    click_on 'Create Picture'
+    expect(page).to have_content("Rating 6 is not valid.")
+  end
+
 end
