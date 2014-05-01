@@ -6,7 +6,7 @@ feature "Manage Media" do
     expect(page).to have_content 'Media Manager'
     expect(page).to have_content 'all pictures'
     expect(page).to have_content 'all videos'
-    expect(page).to have_content 'vimeo videos'
+    expect(page).to have_content 'all vimeo videos'
     expect(page).to have_content 'Not copyrighted at all'
   end
   scenario "User can got to show pages from home page" do
@@ -51,7 +51,7 @@ feature "Manage Media" do
       click_link 'Add New'
     end
 
-    expect(page).to have_content 'Add a video'
+    expect(page).to have_content 'Add a Vimeo Video'
 
   end
 end
