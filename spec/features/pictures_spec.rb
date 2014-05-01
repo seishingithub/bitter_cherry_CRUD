@@ -79,7 +79,7 @@ feature "Manage Pictures" do
     fill_in 'Description', with: desc
     fill_in 'Rating', with: rating
     click_on 'Create Picture'
-    expect(page).to have_content("Rating 6 is not valid.")
+    expect(page).to have_content("Rating must be between 1 and 5")
   end
 
 end

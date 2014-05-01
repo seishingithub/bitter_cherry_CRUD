@@ -186,7 +186,7 @@ feature 'User can manage videos' do
     fill_in 'Description', with: desc
     fill_in 'Rating', with: rating
     click_on 'Create Video'
-    expect(page).to have_content("Rating 6 is not valid.")
+    expect(page).to have_content("Rating must be between 1 and 5")
   end
 
 end
