@@ -2,6 +2,10 @@
 
 Welcome to the most amazing repo of all time.
 
+# What is happening with the Build?
+
+[![Build Status](https://travis-ci.org/seishingithub/bitter_cherry_CRUD.svg?branch=master)](https://travis-ci.org/seishingithub/bitter_cherry_CRUD)
+
 # URLS of SIGNIFICANCE
 
 * pivotal tracker [https://www.pivotaltracker.com/n/projects/1069196](https://www.pivotaltracker.com/n/projects/1069196)
