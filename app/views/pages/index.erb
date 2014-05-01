@@ -1,1 +1,26 @@
 <h2>Welcome</h2>
+<p>Welcome to the Media Manager, where you can, well... manage some media.</p>
+
+<div id="picture_control">
+  <h3>Pictures!</h3>
+
+  <p><%= link_to "View All", pictures_path %></p>
+
+  <p><%= link_to "Add New", new_picture_path %></p>
+</div>
+
+<div id="video_control">
+  <h3>Videos!</h3>
+
+  <p><%= link_to "View All", videos_path %></p>
+
+  <p><%= link_to "Add New", new_video_path %></p>
+</div>
+
+<div id="vimeo_control">
+  <h3>Vimeo Videos!</h3>
+
+  <p><%= link_to "View All", vimeo_videos_path %></p>
+
+  <p><%= link_to "Add New", new_vimeo_video_path %></p>
+</div>

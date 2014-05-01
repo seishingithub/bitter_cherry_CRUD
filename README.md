@@ -18,8 +18,16 @@ Welcome to the most amazing repo of all time.
 * Lori
 * Gerard
 
-# Local database and migrations
+# Get this App up and running on a local machine
 
 To create your local databases and run table migrations:
 
-    $ rake db:create db:migrate
+1. fork and clone this repository
+1. `bundle install`
+1. get databases up and running
+  1. `rake db:create db:migrate`
+  1. `RACK_ENV=test rake db:create`
+  1. `RACK_ENV=test rake db:migrate`
+1. `rails server`
+1. go to `http://localhost:3000/` and have fun!
+
