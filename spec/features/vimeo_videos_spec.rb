@@ -9,7 +9,7 @@ feature "Managing Vimeo Videoes" do
   scenario "User can add a Vimeo" do
     visit '/vimeo_videos'
     click_on 'New Video'
-    expect(page).to have_content 'Add a video'
+    expect(page).to have_content 'Add a Vimeo Video'
     fill_in 'vimeo_video[url]', :with => 'http://vimeo.com/90199254'
     fill_in 'vimeo_video[description]', :with => 'This is a description of a video'
     fill_in 'vimeo_video[rating]', :with => '1'
@@ -21,7 +21,7 @@ feature "Managing Vimeo Videoes" do
   scenario "User can view showpage of video from index page" do
     visit '/vimeo_videos'
     click_on 'New Video'
-    expect(page).to have_content 'Add a video'
+    expect(page).to have_content 'Add a Vimeo Video'
     fill_in 'vimeo_video[url]', :with => 'http://vimeo.com/90199254'
     fill_in 'vimeo_video[description]', :with => 'This is a description of a video'
     fill_in 'vimeo_video[rating]', :with => '1'
@@ -35,7 +35,7 @@ feature "Managing Vimeo Videoes" do
   scenario "User cannot save a Blank URL or description" do
     visit '/vimeo_videos'
     click_on 'New Video'
-    expect(page).to have_content 'Add a video'
+    expect(page).to have_content 'Add a Vimeo Video'
     fill_in 'vimeo_video[url]', :with => ''
     fill_in 'vimeo_video[description]', :with => 'This is a description of a video'
     fill_in 'vimeo_video[rating]', :with => '1'
@@ -44,7 +44,7 @@ feature "Managing Vimeo Videoes" do
 
     visit '/vimeo_videos'
     click_on 'New Video'
-    expect(page).to have_content 'Add a video'
+    expect(page).to have_content 'Add a Vimeo Video'
     fill_in 'vimeo_video[url]', :with => 'http://vimeo.com/90199254'
     fill_in 'vimeo_video[description]', :with => ''
     fill_in 'vimeo_video[rating]', :with => '1'
@@ -55,7 +55,7 @@ feature "Managing Vimeo Videoes" do
   scenario "User can visit an edit page from the show page" do
     visit '/vimeo_videos'
     click_on 'New Video'
-    expect(page).to have_content 'Add a video'
+    expect(page).to have_content 'Add a Vimeo Video'
     fill_in 'vimeo_video[url]', :with => 'http://vimeo.com/60399252'
     fill_in 'vimeo_video[description]', :with => 'This is a description of a video'
     fill_in 'vimeo_video[rating]', :with => '1'
@@ -74,7 +74,7 @@ feature "Managing Vimeo Videoes" do
   scenario "User can delete a vimeo video from the show page" do
     visit '/vimeo_videos'
     click_on 'New Video'
-    expect(page).to have_content 'Add a video'
+    expect(page).to have_content 'Add a Vimeo Video'
     fill_in 'vimeo_video[url]', :with => 'http://vimeo.com/90199254'
     fill_in 'vimeo_video[description]', :with => 'This is a description of a video'
     fill_in 'vimeo_video[rating]', :with => '1'
