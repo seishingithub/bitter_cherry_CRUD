@@ -174,4 +174,19 @@ feature 'User can manage videos' do
     click_on 'Create Video'
     expect(page).to have_content('Url must be a valid YouTube url')
   end
+
+  scenario 'Invalid rating results in error message' do
+    url = 'http://www.google.com'
+    desc = 'Soccer Ball (In The Face) - Parry Gripp'
+    rating = '6'
+    visit '/'
+    click_on 'all videos'
+    click_on 'New Video'
+    fill_in 'URL', with: url
+    fill_in 'Description', with: desc
+    fill_in 'Rating', with: rating
+    click_on 'Create Video'
+    expect(page).to have_content("Rating 6 is not valid.")
+  end
+
 end
